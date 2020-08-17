@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>store</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <filter-name>CharsetFilter</filter-name>
+    <filter-class>com.osmond.charsetfilter.CharsetFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharsetFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <servlet-name>ManagerController</servlet-name>
+    <servlet-class>com.osmond.controller.ManagerController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManagerController</servlet-name>
+    <url-pattern>/manager/ManagerController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UploaderController</display-name>
+    <servlet-name>UploaderController</servlet-name>
+    <servlet-class>com.osmond.controller.UploaderController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploaderController</servlet-name>
+    <url-pattern>/manager/UploaderController</url-pattern>
+  </servlet-mapping>
+</web-app>
